@@ -8,28 +8,25 @@ variable "project_name" {
   type        = string
 }
 
-variable "billing_account_id" {
+variable "billing_account" {
   description = "The billing account ID to associate with the project."
   type        = string
 }
 
-variable "organization_id" {
-  description = "The organization ID under which the project will be created."
-  type        = string
-}
 
 variable "region" {
   description = "The region where resources will be created."
   type        = string
-  default     = "us-central1"
+  default     = "asia-south1"
 }
 
-variable "shared_vpc_host_project_id" {
-  description = "The ID of the host project with the shared VPC."
+variable "credentials_file" {
+  description = "Path to GCP service account key JSON file"
   type        = string
 }
 
-variable "shared_vpc_subnet" {
-  description = "The name of the shared VPC subnet to use."
-  type        = string
+variable "apis_to_enable" {
+  description = "List of APIs to enable in the project"
+  type        = list(string)
+  default     = ["compute.googleapis.com", "storage.googleapis.com"]
 }
