@@ -3,7 +3,7 @@ output "project_id" {
   value       = google_project.project.project_id
 }
 
-output "service_account_email" {
-  description = "The email of the created service account."
-  value       = google_service_account.sa.email
+output "default_vpc_network" {
+  description = "Name of the default VPC network (auto-created by GCP)"
+  value       = "default" # GCP always names the default VPC "default"
 }
