@@ -36,7 +36,7 @@ jobs:
       # with:
       #   credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
       with:
-        workload_identity_provider: '${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}'
+        workload_identity_provider: 'projects/372908247222/locations/global/workloadIdentityPools/dev-github-wif-pool/providers/dev-github-wif-pool'
         service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Set up Google Cloud SDK
